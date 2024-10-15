@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="funciones.js" defer></script>
+    <title>Weather App</title>
+</head>
+<body>
+    <header>
+        <h1>El Tiempo</h1>
+    </header>
+    <form onsubmit="return consultarTiempo();">
+        <input type="text" id="ciudad" placeholder="Buscar ciudad...">
+        <input type="submit" value="Buscar">
+    </form>
+    
+    <div id="resultado">
+        <p>Nombre de la ciudad: <span id="nombre"></span></p>
+        <p>País: <span id="pais"></span></p>
+        <p>Latitud: <span id="latitud"></span></p>
+        <p>Longitud: <span id="longitud"></span></p>
+        <p>Temperatura: <span id="temperatura"></span>°C</p>
+        <p>Sensación térmica: <span id="sensacion"></span>°C</p>
+        <p>Temperatura mínima: <span id="minima"></span>°C</p>
+        <p>Temperatura máxima: <span id="maxima"></span>°C</p>
+        <p>Presión: <span id="presion"></span> hPa</p>
+        <p>Humedad: <span id="humedad"></span>%</p>
+        <p>Descripción: <span id="descripcion"></span></p>
+        <p>Icono: <img id="icono" src="" alt="Icono del clima"></p>
+    </div>
+    <form onsubmit="return consultarTiempoExtra();">
+        <input type="text" id="ciudad" placeholder="Buscar ciudad...">
+        <select id="dias">
+            <option value="1">Dentro de 1 día</option>
+            <option value="2">Dentro de 2 días</option>
+            <option value="3">Dentro de 3 días</option>
+            <option value="4">Dentro de 4 días</option>
+            <option value="5">Dentro de 5 días</option>
+        </select>
+        <input type="submit" value="Buscar">
+    </form>
+
+</body>
+</html>
